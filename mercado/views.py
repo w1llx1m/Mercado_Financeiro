@@ -15,9 +15,7 @@ def get_stock():
     pass
 
 def getAll_stock_list():
-    get = rqt.get('https://www.dadosdemercado.com.br/acoes')
-    ret = get.content
-    soup = BeautifulSoup(ret, 'html.parser').prettify()
-    print(soup)
-    
+    get = rqt.get('https://coinmarketcap.com/pt-br/')
+    ret = get.content.decode('utf-8')
+    soup = BeautifulSoup(ret, 'html.parser')
     return 'ola'
